@@ -3,27 +3,26 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|username|string|null: false|
+|name|string|null: false|
 |email|string|null: false, unique: true|
 |password|string|null: false| 
 
 ### Association
-- has-many :groups, through: groups_users
-- has-many :groups_users
-- has-many :messages
+- has_many :groups, through: groups_users
+- has_many :groups_users
+- has_many :messages
 
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|title|text|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|title|string|null: false|
 
 ### Association
-- has-many :users, through: groups_users
-- has-many :groups_users
-- has-many :messages
+- has_many :users, through: groups_users
+- has_many :groups_users
+- has_many :messages
 
 
 ## groups_usersテーブル
@@ -42,7 +41,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text|
 |image|string|
 |group_id|integer|null: false, foreign_key: true|
 |user_id|integer|null: false, foreign_key: true|
