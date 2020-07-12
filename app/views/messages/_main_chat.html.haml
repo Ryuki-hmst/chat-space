@@ -1,0 +1,28 @@
+.ChatMain
+  .Group-info
+    .Group-info__Right-Header
+      .Group-Name
+        group-name
+      %ul.Member-list
+        Member：
+        %li.Member
+          a
+    = link_to "Edit", "#", class: "Edit-Button"
+  .MessageField
+    .Messagebox
+      .Message-Info
+        .Message-Info__username
+          Hashimoto
+        .Message-Info__date
+          2020/7/11 12:00
+      .Message
+        %p.Message__content
+          テストメッセージ
+  .Message-Form
+    %form.new_message
+      .Input-box
+        %input{type: "text", class: "Input-box__text", placeholder: "type a message"}
+        %label{class: "Input-box__image"}
+          = icon('fas','image')
+          %input{type:"file", class: "Input-box__image__file"}
+      %input{type:"submit", class:"submit-btn", value:"Send"}
