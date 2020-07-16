@@ -1,14 +1,14 @@
 .ChatSide
   .Left-Header
     .Left-Header__list
-      .Left-Header__username
-        ryuki
+      %h3.Left-Header__username
+        = current_user.name
       %ul.Left-Header__iconlist
         %li.Left-Header__Icon
           = link_to "#" do
             = icon("fas","edit")
         %li.Left-Header__Icon
-          = link_to "#" do
+          = link_to edit_user_path(current_user) do
             = icon("fas", "cog")
   .Group-List
     = link_to "#", class:"Group" do
