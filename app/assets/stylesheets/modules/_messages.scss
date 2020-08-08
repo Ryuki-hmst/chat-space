@@ -37,16 +37,18 @@
     height: calc(100vh - 100px);
     background-color: #2f3e51;
     padding: 0 20px;
+    font-weight: bold;
    .Group {
      padding: 20px 0 40px;
-     color : #ffffff;
      text-decoration: none;
      &__name {
       font-size: 15px;
+      color : #ffffff;
       }
      &__message {
        font-size: 11px;
        margin-top: 5px;
+       color : #ffffff;
       }
     }
   }
@@ -93,9 +95,9 @@
     padding: 35px 40px 0;
     height: calc(100vh - 100px - 90px);
     overflow: scroll;
-    .Messagebox {
+    .MessageBox {
       margin-bottom: 46px;
-      .Message-Info {
+      .MessageInfo {
         display: flex;
         &__username {
           color: #434a54;
