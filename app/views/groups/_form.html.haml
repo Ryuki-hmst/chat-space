@@ -33,6 +33,7 @@
               .ChatMember__remove.ChatMember__button{"data-user-id": user.id, "data-user-name": user.name} 削除
               %input{name: "group[user_ids][]", type:"hidden", value: user.id}
   .SettingGroupForm__field
+  .SettingGroupForm__field
     .SettingGroupForm__leftField
     .SettingGroupForm__rightField
       = f.submit class: 'SettingGroupForm__button'
